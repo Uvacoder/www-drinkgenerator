@@ -1,3 +1,35 @@
-.temp {
-  visibility: visible;
+.section1 {
+  min-height: 768px;
+  background-repeat: no-repeat;
+  background-color: aqua;
+  background-size: cover;
+  /* background-image: url("../../pics/pic17.jpg"); */
+}
+.section1 ::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.section2 {
+  min-height: 768px;
+  background-repeat: no-repeat;
+  background-color: #00e5e5;
+}
+
+.section3 {
+  min-height: 384px;
+  background-repeat: no-repeat;
+  background-color: #00cece;
+}
+
+#heroTitle {
+  position: absolute;
+  transition: all 0.6s cubic-bezier(0, 0.105, 0.035, 1.57);
+  transform: translate(-50%, -50%);
+  top: 33%;
+  left: 50%;
+}
+@media screen and (max-width: 560px) {
+  #heroTitle {
+    top: 45%;
+  }
 }
