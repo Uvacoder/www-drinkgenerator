@@ -1,0 +1,18 @@
+.navBar {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  /* left: 0; */
+  /* top: 0; */
+}
+.btnNav {
+  margin: 3%;
+  float: right;
+  border: none;
+  padding: 0;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: inherit;
+  color: white;
+  text-decoration: none;
+}

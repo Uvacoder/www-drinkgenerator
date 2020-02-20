@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Landing } from './components/landing/Landing';
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(<Landing />, document.getElementById('root'));
 

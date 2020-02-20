@@ -86,4 +86,5 @@ video {
   border: 0;
   font-family: 'Roboto', sans-serif;
   vertical-align: baseline;
+  scroll-behavior: smooth;
 }
