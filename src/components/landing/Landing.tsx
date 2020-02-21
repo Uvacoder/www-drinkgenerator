@@ -9,8 +9,10 @@ export class Landing extends Component {
       <div className="container">
         <Nav />
         <div id='section1'>
-          <h1 id="heroTitle">Mix. Drink. Repeat.</h1>
-          <Searchbox />
+          <div className="innerContainer">
+            <h1 id="heroTitle">Mix. Drink. Repeat.</h1>
+            <Searchbox />
+          </div>
         </div>
         <div id='section2'>
           stats

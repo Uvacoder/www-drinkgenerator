@@ -1,10 +1,10 @@
 .search-wrapper {
-  position: absolute;
+  /* position: absolute;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   top: 65%;
-  left: 50%;
+  left: 50%; */
 }
 
 .search-wrapper .input-holder {
@@ -19,7 +19,7 @@
   transition: all 0.3s ease-in-out;
 }
 .search-wrapper.active .input-holder {
-  border-radius: 50px;
+  /* border-radius: 50px; */
   width: 500px;
   background: rgba(34, 215, 228, 0.5);
   -webkit-transition: all 0.5s cubic-bezier(0, 0.105, 0.035, 1.57);
