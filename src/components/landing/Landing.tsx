@@ -3,6 +3,7 @@ import './Landing.css';
 import { Searchbox } from '../searchbox/Searchbox';
 import { Nav } from '../nav/Nav';
 
+
 export class Landing extends Component {
   render() {
     return (
@@ -23,12 +24,6 @@ export class Landing extends Component {
         <div id='section4'>
           about
         </div>
-        <a href="#section1">
-          <button className="up-icon">
-            {/* <GoTriangleUp /> */}
-            Up!
-        </button>
-        </a>
       </div>
     )
   }
