@@ -191,6 +191,7 @@
   margin-left: 25px;
   height: 7vh;
   border-radius: 0px 0px 6px 6px;
+  transition: all 0.5s cubic-bezier(0, 0.105, 0.035, 1.57);
 }
 
 @media screen and (max-width: 560px) {
@@ -198,7 +199,7 @@
     width: 300px;
   }
   .search-wrapper .result-container {
-    width: 300px;
+    width: 250px;
   }
   .search-wrapper {
     top: 75%;
