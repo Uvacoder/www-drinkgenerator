@@ -2,8 +2,11 @@ import { DrinkShell, DrinkShellSchema } from './models/drink.model';
 import { ValidationError } from 'validate';
 
 export class Service {
+
+    baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1';
+
     CocktailByName(name: string) {
-        fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`)
+        fetch(`${this.baseUrl}/search.php?s=${name}`)
             .then(res => res.json())
             .then(
                 (results: DrinkShell) => {
