@@ -1,11 +1,15 @@
-import { DrinkShell } from './models/drink.model';
+import { DrinkShell, DrinkShellSchema } from './models/drink.model';
+import { ValidationError } from 'validate';
+
 export class Service {
-    simpleCall() {
-        fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+    CocktailByName(name: string) {
+        fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`)
             .then(res => res.json())
             .then(
-                (result: DrinkShell) => {
-                    console.log(result.drinks[0]);
+                (results: DrinkShell) => {
+                    let validate: ValidationError[] = [];
+                    validate = DrinkShellSchema.validate(results.drinks);
+                    console.log(validate);
                 },
                 // Note: it's important to handle errors here
                 // instead of a catch() block so that we don't swallow

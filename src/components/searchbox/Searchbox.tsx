@@ -12,7 +12,7 @@ export class Searchbox extends Component<{}, { is_visible: boolean }> {
     }
 
     componentDidMount() {
-        this.service.simpleCall();
+        this.service.CocktailByName('gin');
     }
 
     render() {
