@@ -17,10 +17,6 @@ export class ScrollToTop extends Component<{}, { is_visible: boolean }> {
         });
     }
 
-    onFocus() {
-        window.scrollTo(0, 0);
-    }
-
     toggleVisible() {
         if (window.pageYOffset > 300) {
             this.setState({
@@ -37,7 +33,7 @@ export class ScrollToTop extends Component<{}, { is_visible: boolean }> {
         const { is_visible } = this.state;
         if (is_visible)
             return (
-                <a id="scroll-to-top" href="#section1" onFocus={this.onFocus}>
+                <a id="scroll-to-top" href="#section1">
                     <button className="up-icon">
                         <IoMdRocket />
                     </button>

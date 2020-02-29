@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import './Searchbox.css';
 import { GoSearch } from "react-icons/go";
+import { Service } from '../services/Service';
 
-export class Searchbox extends Component {
+export class Searchbox extends Component<{}, { is_visible: boolean }> {
+
+    service = new Service();
+
+    constructor(props: any) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.service.simpleCall();
+    }
+
     render() {
         return (
             <div className="search-wrapper active">
