@@ -11,8 +11,12 @@ export class Service {
             .then(
                 (results: DrinkShell) => {
                     let validate: ValidationError[] = [];
-                    validate = DrinkShellSchema.validate(results.drinks);
-                    console.log(validate);
+                    validate = DrinkShellSchema.validate(results.drinks, { strip: false });
+                    if (validate.length === 0) {
+                        console.log(results.drinks)
+                    } else {
+                        console.error(validate);
+                    }
                 },
                 // Note: it's important to handle errors here
                 // instead of a catch() block so that we don't swallow

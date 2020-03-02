@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Searchbox.css';
 import { GoSearch } from "react-icons/go";
-import { Service } from '../services/Service';
+import { Service } from '../../services/Service';
 
 export class Searchbox extends Component<{}, { is_visible: boolean }> {
 
@@ -13,8 +13,10 @@ export class Searchbox extends Component<{}, { is_visible: boolean }> {
     }
 
     keyPress(event: any) {
-        console.log('event value', event.target.value)
-        this.service.CocktailByName(event.target.value);
+        if (event.target.value) {
+            const value = event.target.value;
+            this.service.CocktailByName(value);
+        }
     }
 
     render() {
